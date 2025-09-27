@@ -30,7 +30,7 @@ if [ $? -ne 0 ]; then
     dnf install mysql -y
     validate $? "mysql" 
 else
-    echo -e "$? is already exist...... $Y Skipped $N"
+    echo -e "mysql is already exist...... $Y Skipped $N"
 fi
 
 
