@@ -11,4 +11,4 @@
 leaders=("modi" "pawankalyan" "chandrababunaidu" "kcr" "KTR" "revanthreddy")
 
 echo "list of all leader: ${leaders[@]}"
-echo "first name is: ${leaders[1]}"
+echo "first name is: ${leaders[0]}"
