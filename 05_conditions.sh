@@ -2,8 +2,9 @@
 
 number=$1
 
-if ! [["$number" =~ ^-? [0-9]+$ ]]; then
+if ! [["$number" =~ ^-?[0-9]+$ ]]; then
     echo "Error: given number is not an integer value, please provide integer value"
+    exit 1
 fi
 
 if [ $(($number %2)) -eq 0 ]; then
