@@ -5,7 +5,7 @@ user_rootaccess=$(id -u)
 
 #if use donot have root acces
 if [ $user_rootaccess -ne 0 ]; then
-    echo "Please run the script using root access"
+    echo "Error:: Please run the script using root access"
     exit 1
 fi
 
