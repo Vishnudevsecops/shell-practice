@@ -18,5 +18,5 @@ else
     mask=$(printf '%*s' $((pin_length - 3)) '' | tr ' ' '*')
 
     # Show masked PIN
-    echo "PIN: ${mask}${last3}"
+    echo "Your entered PIN is: ${mask}${last3}"
 fi
