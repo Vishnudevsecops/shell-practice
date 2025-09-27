@@ -11,12 +11,12 @@ user_rootaccess=$(id -u)
 #create folder in log folder 
 logs_folder="/var/log/shell-scripting"
 #removing .sh from script name to create a log file
-script_name="$(echo $0 | cut -d "." -f1 )
-#creating log file
-log_file="$logs_folder/$script_name.log"
+script_name=$( echo $0 | cut -d "." -f1 )
+log_file="$logs_folder/$script_name.log" 
+
 
 mkdir -p $log_folder
-echo "script started executing at : $("date") | tee -a $log_file
+echo "script started executing at : $(date)" | tee -a $log_file
 #if use donot have root acces
 if [ $user_rootaccess -ne 0 ]; then
     echo "Error:: Please run the script using root access"
