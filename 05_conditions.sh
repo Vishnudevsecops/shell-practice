@@ -2,9 +2,9 @@
 
 number=$1
 
-if [ $(($number % 2 )) -eq to 0 ]; then
+if [ $number -eq to 0 ]; then
     echo "given number $number is Even number"
-elif [ $number -eq 0 ]; then
+elif [ $number -lt 0 ]; then
     echo "given number is negative number"
 else
     echo "given number $number is odd number"
