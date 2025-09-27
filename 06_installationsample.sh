@@ -9,7 +9,7 @@ N="\e[0m"
 user_rootaccess=$(id -u)
 
 #create folder in log folder 
-logs_folder="/var/log/shell-scripting"
+logs_folder="/var/log/shell-script"
 #removing .sh from script name to create a log file
 script_name=$( echo $0 | cut -d "." -f1 )
 log_file="$logs_folder/$script_name.log" 
