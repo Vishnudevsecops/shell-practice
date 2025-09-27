@@ -9,11 +9,23 @@ if [ $user_rootaccess -ne 0 ]; then
     exit 1
 fi
 
+validate(){
+
+    if [$1 -ne 0 ]; then
+        echo "error: $2 installation is failed"
+        exit 1
+    else    
+        echo "$2 installation completed"
+    fi
+}
 dnf install mysql -y
 
-if [$? -ne 0 ]; then
-    echo "error: Mysql installation is failed"
-    exit 1
-else    
-    echo "mysql installation completed"
-fi
+validate $? "mysql" 
+
+dnf install nginix -y
+
+validate $? "niginix"
+
+dnf install python3 -y
+
+validate $? "python3"
