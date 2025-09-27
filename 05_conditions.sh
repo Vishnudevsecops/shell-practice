@@ -2,8 +2,10 @@
 
 number=$1
 
-if [ $number -lt 10 ]; then
-    echo "given number $number is less than 10"
+if [ $(($number % 2 )) -eq to 0 ]; then
+    echo "given number $number is Even number"
+elif [ $number -eq 0 ]; then
+    echo "given number is negative number"
 else
-    echo "given number $number is grather than 10"
+    echo "given number $number is odd number"
 fi
