@@ -13,15 +13,15 @@ if [ $user_rootaccess -ne 0 ]; then
     exit 1
 fi
 
-validate(){
-    if [ $1 -ne 0 ]; then
-        echo -e "error:: $2 installation is $R failed $N"
-        exit 1
-        else
-            echo -e "$2 installation $G Completed $N"
-    fi
+#validate(){
+ #   if [ $1 -ne 0 ]; then
+ #       echo -e "error:: $2 installation is $R failed $N"
+ #       exit 1
+  #      else
+   #         echo -e "$2 installation $G Completed $N"
+   # fi
 
-}
+#}
 if [ $# -eq 0 ]; then
     echo "Error:: Please provide package names to install"
     exit 1
@@ -32,7 +32,7 @@ do
     dnf list installed $package 
     if [ $? -ne 0 ]; then
         dnf install $package -y
-        validate $? "$package"
+        #validate $? "$package"
         if [ $? -ne 0]; then
             echo -e "error:: $package installation is $R failed $N"
             exit 1
