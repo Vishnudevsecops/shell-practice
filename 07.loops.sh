@@ -29,4 +29,3 @@ do
                     echo -e "$package is already exist......$Y Skipped $N"
                     fi
                     done
-                ]]
