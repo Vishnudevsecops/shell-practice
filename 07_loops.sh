@@ -40,7 +40,7 @@ for package in $@; do
     if [ $? -ne 0 ]; then
         dnf install $package -y
         validate $? "$package"
-        if [ $? -ne 0]; then
+        if [ $? -ne 0 ]; then
             echo -e "error:: $package installation is $R failed $N" | tee -a $log_file
             exit 1
         else
