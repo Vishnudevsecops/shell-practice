@@ -8,7 +8,7 @@ N="\e[0m"
 #check if current user has root access
 user_rootaccess=$(id -u)
 #if user does not have root access
-if [ $user_rootacess -ne 0 ]; then 
+if [ $user_rootaccess -ne 0 ]; then 
     echo "Error:: Please run the script using root access"
     exit 1
 fi
